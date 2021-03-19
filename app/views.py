@@ -10,7 +10,7 @@ def access_request(url, timer):
         url = str(url)
         timer = int(timer)
         req = requests.get(url)
-        if req.status_code == 200:
+        if req.status_code == 200 or (url == 'http://updator2.herokuapp.com/' and req.status_code == 404):
             print('TUDO OK em: ', url)
         else:
             print('Erro ao acessar URL: ', url)
