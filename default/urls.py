@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 import app
+from app.views import IndexSite
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('app.urls')),
+    path('', IndexSite.as_view(), name='index'),
     path('accounts/', include('allauth.urls')),
 ]
