@@ -20,5 +20,5 @@ from app.views import IndexSite
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', IndexSite.as_view(), name='index'),
+    path('update', IndexSite.as_view(), name='index'),
 ]
