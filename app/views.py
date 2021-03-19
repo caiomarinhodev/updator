@@ -21,7 +21,5 @@ class IndexSite(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
-        Thread(target=access_request,
-               kwargs=dict(url='http://tvmovel.herokuapp.com/collect-multicanais/', timer=1200)).start()
-        Thread(target=access_request, kwargs=dict(url='http://updator2.herokuapp.com/', timer=60)).start()
+        Thread(target=access_request, kwargs=dict(url='http://updator1.herokuapp.com/', timer=60)).start()
         return super(IndexSite, self).get(request, *args, **kwargs)
